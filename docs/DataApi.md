@@ -1508,7 +1508,7 @@ http://localhost:8080/massage/appOrderData/getRoleByOpenid.do?Openid=http://loca
    
    | KEY | TYPE | DEFAULT | VALUE | REQUIRED |DESC |
    | :---: | :---: | :---: | :---: | :---: |:---: |
-   | TechnicianId | string |  |  | true |  领班id
+   | TechnicianId | string |  |  | true |  技师id
 
    
    - response
