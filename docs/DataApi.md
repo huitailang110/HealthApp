@@ -1943,3 +1943,20 @@ http://localhost:8080/massage/appuser/getAuthCode.do?userPhone=18859959027
     "Errmsg": "OK"
 }
    ```     
+38.技师获发送求救
+-http://localhost:8081/massage/appTechnicianData/getHelp.do?from_username=苏技师&tel=13606013761&to_username=伯爵酒店
+-请求参数
+@param	from_username	发件人(当前技师)
+	 * @param	tel	当前技师电话号码
+	 * @param	to_username	收件人（选择的当前酒店）
+         
+ -返回结果
+ 返回结果： 0-成功，-1 失败
+ ```json
+   
+{
+    "Status": 0,
+    "ErrMsg": "OK"
+}
+   ```
+
