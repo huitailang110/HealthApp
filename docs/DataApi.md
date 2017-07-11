@@ -823,7 +823,7 @@ http://localhost:8080/massage/appTechnicianData/getAllConstant.do
  | TechnicianId | string |  |  | true | 
  | Password | string |  |  | false | 密码
  | Account | string |  |  | false | 账号
-
+ | AccountName | string |  |  | false | 账号姓名
  
  - response
    
@@ -835,7 +835,7 @@ http://localhost:8080/massage/appTechnicianData/getAllConstant.do
  
  > 请求url示例
  
- http://localhost:8080/massage/appGiftsData/changeGiftInfo.do?TechnicianId=15babeda564b4bf987395f60f3c1768f&Password=100866
+ http://localhost:8080/massage/appGiftsData/changeGiftInfo.do?TechnicianId=15babeda564b4bf987395f60f3c1768f&Password=100866&AccountName=张三
  > 返回数据示例
    
  ```json
