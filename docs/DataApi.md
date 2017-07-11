@@ -1943,7 +1943,7 @@ http://localhost:8080/massage/appuser/getAuthCode.do?userPhone=18859959027
     "Errmsg": "OK"
 }
    ```     
-38.技师获发送求救
+38.技师获取发送求救
 - http://localhost:8081/massage/appTechnicianData/getHelp.do?from_username=苏技师&tel=13606013761&to_username=伯爵酒店
 - 请求参数
 @param	from_username	发件人(当前技师)
@@ -1959,4 +1959,49 @@ http://localhost:8080/massage/appuser/getAuthCode.do?userPhone=18859959027
     "ErrMsg": "OK"
 }
    ```
+38.新增搜索技师接口
+- http://localhost:8081/massage/appTechnicianData/searchTechnician.do?name='黄技师'
+- 请求参数
+@param	name 技师姓名
+
+ -返回结果
+ 返回结果： 0-成功，-1 失败
+ ```json
+{
+    "technicainList": [
+        {
+            "TECHLEADER_ID": "1",
+            "AVATAR": "http://www.wangsanchuan.cn/testImg/jishi.png",
+            "STAR": 5,
+            "RIGHTS": "",
+            "STATUS": 0,
+            "HOT": 0,
+            "IF_LINE": 0,
+            "CERTIFICATE_IDS": "",
+            "ITEMS": "",
+            "TEL": "13606013761",
+            "SEX": 0,
+            "ADDR": "东海大街",
+            "TECHNICIAN_ID": "15babeda564b4bf987395f60f3c1768f",
+            "POSITION": 1,
+            "EXPERIENCE_YEAR": 1,
+            "SERVE_CONTENT": "",
+            "ON_OFF": 0,
+            "NAME": "黄技师",
+            "AGE": "28",
+            "AVERAGE_SCORE": 5,
+            "LEVEL": 0,
+            "OPENID": "",
+            "NUM_SCORE": 0,
+            "TOTAL_SCORE": 0,
+            "EXPERIENCE": "本人为人和善，医德高尚，对生活充满激情。勤学好问，认真负责，对工作细心、热忱。She is very beautiful",
+            "REGISTAR": "厦门",
+            "TODAY_ABOUT": 0,
+            "REGISTER_TIME": "2017-01-21 23:39:49",
+            "SERVER_CITY": "福建省泉州市丰泽区"
+        }
+    ]
+}
+   ```
+   
 
