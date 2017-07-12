@@ -1959,7 +1959,7 @@ http://localhost:8080/massage/appuser/getAuthCode.do?userPhone=18859959027
     "ErrMsg": "OK"
 }
    ```
-38.新增搜索技师接口
+39.新增搜索技师接口
 - http://localhost:8081/massage/appTechnicianData/searchTechnician.do?name='黄技师'
 - 请求参数
 @param	name 技师姓名
