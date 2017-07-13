@@ -10,6 +10,7 @@
 | :---: | :---: | :---: | :---: | :---: |:---: |
 | PageNow | int | 1 | 0 | true | 记录开始
 | PageSize | int |  | 10 | true | 记录条数
+| area | string |  |  | true | 地区
 - response
 
 | KEY | TYPE | DEFAULT | VALUE | DESC |
@@ -25,6 +26,7 @@
 {
   "Status": 0,
   "Data": {
+  "Recordcount": 43,//记录总数
   "TechnicianLists": [
     {
       "TECHLEADER_ID": "1",//技师id
