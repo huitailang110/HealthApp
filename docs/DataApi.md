@@ -2003,5 +2003,12 @@ http://localhost:8080/massage/appuser/getAuthCode.do?userPhone=18859959027
     ]
 }
    ```
-   
+ 40.提交openId接口
+ - http://localhost:8081/massage/appWeChat/submitWeChatUser.do?openId=o-9OW0gYOQLl_cH4YawGhrN0a123
+- 请求参数
+* @param openId	微信openId
+* @param nickname	昵称
+* @param headImg	头像
 
+-返回结果： 0-成功，-1 失败
+   
