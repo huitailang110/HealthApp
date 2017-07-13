@@ -10,6 +10,7 @@
 | :---: | :---: | :---: | :---: | :---: |:---: |
 | PageNow | int | 1 | 0 | true | 记录开始
 | PageSize | int |  | 10 | true | 记录条数
+| area | int |  | 10 | true | 服务地区
 - response
 
 | KEY | TYPE | DEFAULT | VALUE | DESC |
@@ -25,6 +26,7 @@
 {
   "Status": 0,
   "Data": {
+  "Recordcount": 43,//记录总数
   "TechnicianLists": [
     {
       "TECHLEADER_ID": "1",//技师id
@@ -74,7 +76,7 @@
 }
 ```
 请求例子：
-http://localhost:8080/massage/appTechnicianData/getTechniciansList.do?PageNow=1&PageSize=10
+http://localhost:8080/massage/appTechnicianData/getTechniciansList.do?PageNow=1&PageSize=10&area=福建省泉州市鲤城区
 2. 获取技师的推拿时间段 POST
 - url: **http://hostname:port/massage/appTechnicianData/getTechniciansList.do**
 - postData
