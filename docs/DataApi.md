@@ -429,7 +429,9 @@ http://localhost:8080/massage/appCollectData/getCollectListByCustomerid.do?Type=
 }
    ```
 9. 客户下单 POST
-  - url: **http://hostname:port/massage/appOrderData/submitOrder.do**
+  - url: http://www.wangsanchuan.cn/massage/appOrderData/submitOrder.do?CustomerId=1111&TechnicianId=6bab8de3e2aa40b3910611f9472e67fb
+&ItemId=1AA&OrderNum=1&OrderTel=15240017969&OrderAdd=海星小区&OrderCallTime=2017-07-14&OrderRemark=备注
+
   - postData
   
   | KEY | TYPE | DEFAULT | VALUE | REQUIRED |DESC |
@@ -443,6 +445,8 @@ http://localhost:8080/massage/appCollectData/getCollectListByCustomerid.do?Type=
 | OrderCallTime | string |  |  | true | 上门时间
 | OrderRemark | string |  |  | true | 备注
 | CouponId | string |  |  | false | （有就传，没有就不传）优惠券
+@param HotelId	酒店ID	不必需
+
   - response
   
   | KEY | TYPE | DEFAULT | VALUE | DESC |
@@ -451,16 +455,44 @@ http://localhost:8080/massage/appCollectData/getCollectListByCustomerid.do?Type=
   | ErrMsg | str |  | ok/desc | 请求错误描述 |
   | Data | json(array) |  |  | 返回的数据 |
   
-  > 请求url示例
-  http://192.168.1.126:8080/massage/appOrderData/submitOrder.do?CustomerId=1111&TechnicianId=6bab8de3e2aa40b3910611f9472e67fb&ItemId=1AA&OrderNum=2&OrderTel=17777777777&OrderAdd=haixingxiaoqu&OrderCallTime=2017-6-18 20:30&OrderRemark=hello&CouponId=1
-  http://localhost:8080/massage/appOrderData/submitOrder.do?CUSTOMER_ID=1111&TECHNICIAN_ID=6bab8de3e2aa40b3910611f9472e67fb&ITEM_ID=1AA&ORDER_NUM=2&ORDER_TEL=17777777777&ORDER_ADD=haixingxiaoqu&ORDER_CALL_TIME=2017-6-18 20:30&ORDER_REMARK=hello&COUPON_ID=1
+  >
 
 > 返回数据示例
     
    ```json
 {
-  "Status": 0,
-  "ErrMsg": "OK"
+    "Status": 0,
+    "Errmsg": "OK",
+    "Orderinfo": {
+        "OrderNum": 1,
+        "CreateTime": "2017-07-14 11:19:50",
+        "TransactionId": "",
+        "CustomerId": "1111",
+        "ItemId": "1AA",
+        "OrderTotalprice": 388,
+        "Status": 0,
+        "PayTime": "",
+        "TechconfirmTime": "",
+        "OrderAdd": "海星小区",
+        "CommentsId": "",
+        "RefundConfirmTime": "",
+        "IfCoupon": 1,
+        "RefundEndTime": "",
+        "TechnicianId": "6bab8de3e2aa40b3910611f9472e67fb",
+        "OrderTel": "15240017969",
+        "OrderCallTime": "2017-07-14",
+        "OrderRemark": "备注",
+        "RefundBecause": "",
+        "CompeleteTime": "",
+        "OrderNo": "1119242665",
+        "ItemStartTime": "",
+        "CloseTime": "",
+        "OrderId": "4c8d05730f2f4da589cfb354ec286c86",
+        "RefundStartTime": "",
+        "ItemEndTime": "",
+        "OrderRealitypay": 388,
+        "OrderUnitprice": 388
+    }
 }
    ```
 10. 订单列表 POST
